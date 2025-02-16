@@ -37,14 +37,13 @@ $result = $mysqli->query("DELETE FROM empleados WHERE id = $idempleado");
 
 //Se cierra la conexión de base de datos previamente abierta
 $mysqli->close();
-echo "<div>Registro borrado correctamente...</div>";
-echo "<a href='index.php'>Ver resultado</a>";
+
 //Se redirige a la página principal: index.php
 //header("Location:index.php");
 ?>
 
-    <!--<div>Registro borrado correctamente</div>
-	<a href='index.php'>Ver resultado</a>-->
+    <div>Registro borrado correctamente...</div>
+	<a href='index.php'>Ver resultado</a>
     </main>
 </div>
 </body>

@@ -3,7 +3,6 @@
 include_once("config.php");
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +15,6 @@ include_once("config.php");
 	<header>
 		<h1>ELECTROSHOP S.L.</h1>
 	</header>
-
 	<main>
 
 <?php
@@ -77,16 +75,17 @@ Escapado con mysqli_real_escape_string(): Se convierte en "O\'Reilly", evitando 
 		$result = $mysqli->query("INSERT INTO empleados (nombre, apellido, edad, puesto) VALUES ('$name', '$surname', '$age', '$job')");	
 		//Se cierra la conexión
 		$mysqli->close();
-		echo "<div>Registro añadido correctamente</div>";
+		echo "<div>Registro añadido correctamente...</div>";
 		echo "<a href='index.php'>Ver resultado</a>";
+		//Se redirige a la página principal: index.php
+		//header("Location:index.php");
 	}//fin sino
 }
-
 ?>
+
+ 	<!--<div>Registro añadido correctamente</div>
+	<a href='index.php'>Ver resultado</a>-->
 	</main>
-	<footer>
-    	Created by the IES Miguel Herrero team &copy; 2025
-  	</footer>
 </div>
 </body>
 </html>

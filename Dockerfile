@@ -4,9 +4,18 @@ FROM ubuntu:24.04
 # FROM ubuntu:latest
 
 # ENV: Permite definir una variable de entorno y asignarle un valor por defecto. Se puede utilizar el signo = o un espacio en blanco
+# Se pueden sobreescribir con la opción "--env" al crearse el contenedor: docker run --env...
+# También se puede sobreescribir conla clave "environment" del docker compose
+
 # Con la opción "noninteractive" evita tener que introducir valores de configuración de forma manual durante la instalación de algunos paquetes
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TZ=Europe/Madrid
+
+# En este caso le asignamos unos valores por defecto a la aplicación CRUD PHP: "mariadb", "electroshop", "usuario", "usuario@1"
+ENV MARIADB_HOST=mariadb
+ENV MARIADB_DATABASE=electroshop
+ENV MARIADB_USER=usuario
+ENV MARIADB_PASSWORD=usuario@1
 
 # RUN: Permite definir los comandos que se van a ejecutar SOBRE LA IMAGEN BASE. En este caso: ubuntu:24.04
 # Actualización e instalación de apache y  todos las paquetes necesarios para ejecutar PHP y conectar a MARIADB.
@@ -19,20 +28,12 @@ RUN apt-get update \
 
 # COPY: Permite copiar archivos o directorios desde el contexto local de la máquina donde estamos creando la imagen hasta la imagen que será el sistema de archivos que utilizará el contenedor.
 # Copia el contenido del directorio /src (contenido del sitio web) en el "documentroot" del sitio de apache (/var/www/html)
+
 # COPY /src /var/www/html
 
 # Copia la configuración del sitio en el directorio de configuración de los sitios de apache (/etc/apache2/sites-available)
+
 # COPY /conf/000-default.conf /etc/apache2/sites-available/
-
-# ENV: Permite definir una variable de entorno y asignarle un valor por defecto. Se puede utilizar el signo = o un espacio en blanco
-# Se pueden sobreescribir con la opción "--env" al crearse el contenedor: docker run --env...
-# También se puede sobreescribir conla clave "environment" del docker compose
-# En este caso le asignamos unos valores por defecto: "mariadb", "electroshop", "usuario", "usuario@1"
-
-ENV MARIADB_HOST mariadb
-ENV MARIADB_NAME electroshop
-ENV MARIADB_USER usuario
-ENV MARIADB_PASSWORD usuario@1
 
 # EXPOSE: INFORMA de los puertos que utilizará el contenedor cuando esté en ejecución
 # La instrucción EXPOSE no publica el puerto al exterior, solo informa a Docker.

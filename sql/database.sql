@@ -1,5 +1,5 @@
 
-CREATE DATABASE actividad61HaKa;
+CREATE DATABASE if not exists actividad61HaKa;
 USE actividad61HaKa;
 
 CREATE TABLE productos (

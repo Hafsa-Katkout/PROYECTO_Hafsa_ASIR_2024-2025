@@ -29,11 +29,11 @@ RUN apt-get update \
 # COPY: Permite copiar archivos o directorios desde el contexto local de la máquina donde estamos creando la imagen hasta la imagen que será el sistema de archivos que utilizará el contenedor.
 # Copia el contenido del directorio /src (contenido del sitio web) en el "documentroot" del sitio de apache (/var/www/html)
 
-# COPY /src /var/www/html
+COPY /src /var/www/html
 
 # Copia la configuración del sitio en el directorio de configuración de los sitios de apache (/etc/apache2/sites-available)
 
-# COPY /conf/000-default.conf /etc/apache2/sites-available/
+COPY /conf/000-default.conf /etc/apache2/sites-available/
 
 # EXPOSE: INFORMA de los puertos que utilizará el contenedor cuando esté en ejecución
 # La instrucción EXPOSE no publica el puerto al exterior, solo informa a Docker.

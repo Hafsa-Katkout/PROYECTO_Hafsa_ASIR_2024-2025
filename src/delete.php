@@ -12,7 +12,7 @@ include("config.php");
     <style>
         /* Adding background image */
         body {
-            background-image: url('your-image-url.jpg'); /* Replace 'your-image-url.jpg' with the actual image path */
+            background-image: url('https://i.pinimg.com/736x/66/5d/53/665d530753fd00e1dd3830f5a463d640.jpg'); /* Replace 'your-image-url.jpg' with the actual image path */
             background-size: cover;
             background-position: center;
             color: white;

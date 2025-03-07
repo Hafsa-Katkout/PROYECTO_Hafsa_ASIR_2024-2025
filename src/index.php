@@ -87,7 +87,7 @@ include_once("config.php");
 <body>
 <div>
     <header>
-        <h1>Salam alaikom</h1>
+        <h1>Salam Alaikom</h1>
     </header>
     <main>
         <ul>

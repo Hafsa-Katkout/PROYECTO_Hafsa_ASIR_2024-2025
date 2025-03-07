@@ -157,7 +157,6 @@ Escapado con mysqli_real_escape_string(): Se convierte en "O\'Reilly", evitando 
 	else //Sino existen campos de formulario vacíos se procede al alta del nuevo registro
 	{
 //Se ejecuta una sentencia SQL. Inserta (da de alta) el nuevo registro: insert.
-	echo "Vamos a insertar un registro\n";
 		$result = $mysqli->query("INSERT INTO productos (nombre, descripcion, precio,stock,categoria,tendencia,fecha_agregado,visitas,calificacion) VALUES ('$nombre', '$descripcion', '$precio', '$stock', '$categoria', '$tendencia', '$fecha_agregado', '$visitas', '$calificacion')");	
 		//Se cierra la conexión
 		$mysqli->close();

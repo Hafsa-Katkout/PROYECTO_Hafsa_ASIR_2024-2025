@@ -12,7 +12,7 @@ include_once("config.php");
 	<style>
 		body {
 			font-family: Arial, sans-serif;
-			background: url('https://i.pinimg.com/736x/b8/36/56/b836562c5437e14c9b2774ca5c722ec9.jpg') no-repeat center center fixed;
+			background: url('https://i.pinimg.com/736x/15/8b/67/158b67b7a1f50b69140df1dad3279bbe.jpg') no-repeat center center fixed;
 			background-size: cover;
 			color: white;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -100,23 +100,14 @@ PHP proporciona el array asociativo $_POST para acceder a la información enviad
 */
 
 	$nombre = $mysqli->real_escape_string($_POST['nombre']);
-	echo $nombre."\n";
 	$descripcion = $mysqli->real_escape_string($_POST['descripcion']);
-	echo $descripcion."\n";
 	$precio = $mysqli->real_escape_string($_POST['precio']);
-	echo $precio."\n";
 	$stock = $mysqli->real_escape_string($_POST['stock']);
-	echo $stock."\n";
 	$categoria = $mysqli->real_escape_string($_POST['categoria']);
-	echo $categoria."\n";
 	$tendencia = $mysqli->real_escape_string($_POST['tendencia']);
-	echo $tendencia."\n";
 	$fecha_agregado = $mysqli->real_escape_string($_POST['fecha_agregado']);
-	echo $fecha_agregado."\n";
 	$visitas = $mysqli->real_escape_string($_POST['visitas']);
-	echo $visitas."\n";
 	$calificacion = $mysqli->real_escape_string($_POST['calificacion']);
-	echo $calificacion."\n";
 
 /*Con mysqli_real_scape_string protege caracteres especiales en una cadena para ser usada en una sentencia SQL.
 Esta función es usada para crear una cadena SQL legal que se puede usar en una sentencia SQL. 

@@ -9,6 +9,56 @@ include("config.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminar Producto</title>
+    <style>
+        /* Adding background image */
+        body {
+            background-image: url('your-image-url.jpg'); /* Replace 'your-image-url.jpg' with the actual image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling the text */
+        h1 {
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            border: 2px solid white;
+            padding: 10px;
+        }
+
+        main {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        div {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            margin: 0 auto;
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
 <div>
@@ -49,4 +99,5 @@ echo "<a href='index.php'>Ver resultado</a>";
 </div>
 </body>
 </html>
+
 
